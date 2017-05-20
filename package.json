@@ -1,0 +1,10 @@
+{
+  "name": "TimePass",
+  "version": "0.0.1",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "bootstrap": "^4.0.0-alpha.6",
+    "express": "^4.15.2",
+    "mongoose": "^4.9.8"
+  }
+}
