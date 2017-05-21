@@ -26,13 +26,21 @@
       <li class="nav-item">
         <a class="nav-link disabled" href="#">Disabled</a>
       </li>
+
+
     </ul>
-    <form class="form-inline my-2 my-lg-0">
+    <form class="form-inline my-2 my-lg-0" ng-show="!loggedIn">
       <input class="form-control mr-sm-2" ng-model= "login.email" type="text" placeholder="Email">
       <input class="form-control mr-sm-2" type="password" ng-model = "login.password" placeholder="Password">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit" ng-click = "logUserIn();">Login</button>
       <a ui-sref="signUp" style="padding-left: 15px; font-size: 15px;">Create Account</a>
     </form>
+    <ul class="navbar-nav  " ng-show= "loggedIn">
+       <li class="nav-item">
+        <a class="nav-link " ui-sref = "editProfile">Edit Profile</a>
+      </li>
+    </ul>
+
   </div>
 </nav>
 <div class="container">
@@ -47,6 +55,11 @@
  <script src="app/app.js"></script>
  <script src="app/signup/signup-controller.js"></script>
  <script src = "app/navigation/navigation-controller.js"></script>
- 
+ <script src = "app/profile/edit-profile-controller.js"></script>
+
+ <!-- Libraries -->
+  <script src="node_modules/ng-file-upload/dist/ng-file-upload.js"></script> 
+  <script src="node_modules/ng-file-upload/dist/ng-file-upload-all.js"></script> 
+  <script src="node_modules/ng-file-upload/dist/ng-file-upload-shim.js"></script> 
 </body>
 </html>
