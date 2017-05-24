@@ -3,8 +3,8 @@
 </div>
 
 <div class="row">
-	<input class="form-control" ng-model = user.username >
+	<input class="form-control" ng-model = "user.username" ng-blur="updateusername()">
 </div>
 <div class="row">
-	<textarea class="form-control" ng-model = user.bio ></textarea>
+	<textarea class="form-control" ng-model = "user.bio" ng-blur="updatebio()"></textarea>
 </div>

@@ -1,0 +1,33 @@
+<br><br>
+<div class="container">
+	<div class="row">
+		<div class=" col-md-6 offset-md-1">
+		<p class="text-muted">Your posts will go here</p>
+			<div class="row">
+				<textarea class="form-control" type="text" ng-model="newPost" ng-keypress="sendPost($event)" placeholder="Make Post ..... then press enter"></textarea>
+			</div>			
+			<div class="alert alert-info" role="alert" ng-show="incomingPosts"><a ng-click="setNewPosts()">There are {{difference}} new posts</a></div>
+			<div class="container py-3" ng-repeat= "post in posts">
+				    <div class="card">
+				      <div class="row ">
+				        <div class="col-md-4">
+				            <img src="{{post.userImage}}" class="w-100">
+				          </div>
+				          <div class="col-md-8 px-3">
+				            <div class="card-block px-3">
+				              <h6 class="card-title text-muted" ><b>{{post.user}}</b> <span >created a new post</span></h6>
+				              <p class="card-text text-muted"><small>{{post.date | date: 'MM/dd/yyyy hh:mm'}}</small></p>
+
+				              <p>{{post.content}}</p>
+				           
+				             
+				            </div>
+				          </div>
+
+				        </div>
+				      </div>
+   				 </div>			
+			</div>		
+	</div>
+</div>
+

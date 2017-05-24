@@ -1,1 +1,10 @@
 /*  Base */
+h6.card-title{
+	margin: 0px;
+}
+p.card-text{
+	margin-bottom: 2.5px;
+}
+p.small{
+	font-size: 11px;
+}
